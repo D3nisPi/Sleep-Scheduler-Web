@@ -79,7 +79,7 @@ async function tryGetUserInfo(tries = 3) {
         elements.displayName.textContent = responseData.display_name;
     } catch (error) {
         if (error.code === 401) {
-            refreshed = await refresh_tokens();
+            let refreshed = await refresh_tokens();
             if (!refreshed)
                 window.location.href = loginUri;
             else
@@ -103,7 +103,7 @@ async function tryGetSleepGoal(tries = 3) {
         elements.goalButton.textContent = "Edit goal";
     } catch (error) {
         if (error.code === 401) {
-            refreshed = await refresh_tokens();
+            let refreshed = await refresh_tokens();
             if (!refreshed)
                 window.location.href = loginUri;
             else
@@ -137,7 +137,7 @@ async function tryUpdateSleepNote(tries = 3) {
         drawPlot();
     } catch (error) {
         if (error.code === 401) {
-            refreshed = await refresh_tokens();
+            let refreshed = await refresh_tokens();
             if (!refreshed)
                 window.location.href = loginUri;
             else
@@ -168,7 +168,7 @@ async function tryCreateSleepNote(tries = 3) {
         drawPlot();
     } catch (error) {
         if (error.code === 401) {
-            refreshed = await refresh_tokens();
+            let refreshed = await refresh_tokens();
             if (!refreshed)
                 window.location.href = loginUri;
             else
@@ -191,7 +191,7 @@ async function tryUpdateSleepGoal(tries = 3) {
         elements.errorDiv.textContent = "Goal succesfuly edited";
     } catch (error) {
         if (error.code === 401) {
-            refreshed = await refresh_tokens();
+            let refreshed = await refresh_tokens();
             if (!refreshed)
                 window.location.href = loginUri;
             else
@@ -215,7 +215,7 @@ async function tryCreateSleepGoal(tries = 3) {
         elements.errorDiv.textContent = "Goal succesfuly created";
     } catch (error) {
         if (error.code === 401) {
-            refreshed = await refresh_tokens();
+            let refreshed = await refresh_tokens();
             if (!refreshed)
                 window.location.href = loginUri;
             else
@@ -239,7 +239,7 @@ async function tryGetSleepNote(date, tries = 3) {
         );
     } catch (error) {
         if (error.code === 401) {
-            refreshed = await refresh_tokens();
+            let refreshed = await refresh_tokens();
             if (!refreshed)
                 window.location.href = loginUri;
             else
