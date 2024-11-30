@@ -30,7 +30,7 @@ function setDefaultSleepNote() {
     elements.noteStart.value = '22:00';
     elements.noteEnd.value = '06:00';
     elements.setRating(0)
-    elements.noteComment.textContent = null;
+    elements.noteComment.value = null;
     elements.noteButton.textContent = "Add Note";
     elements.updateDuration();
     elements.updateStars();
