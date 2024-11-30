@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="header">
+            <div id="errorDiv" class="error"></div>
+            <div class="user-info">
+                <div class="user-details">
+                    <div id="displayName" class="display-name">Display Name</div>
+                    <div id="username" class="username">@username</div>
+                </div>
+                <div class="icon user-icon"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="box plot-container">
+                <canvas id="plot"></canvas>
+            </div>
+
+            <div class="box sleep-note-container">
+                <h2>Sleep Note Information</h2>
+    
+                <div class="time-picker-item">
+                    <div class="icon moon-icon"></div>
+                    <input type="time" id="noteSleepStart">
+                </div>
+
+                <div class="time-picker-item">
+                    <div class="icon sun-icon"></div>
+                    <input type="time" id="noteSleepEnd">
+                </div>
+
+                <div class="sleep-duration">
+                    <div class="icon sleep-icon"></div>
+                    <p id="sleepDurationText"></p>
+                </div>
+
+                <div class="rating">
+                    <div class="stars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <textarea id="noteComment" class="sleep-comment" placeholder="Write your comment here..." rows="4"></textarea>
+                </div>
+
+                <button id="addNoteButton" class="add-note-button">Add Note</button>
+            </div>
+
+
+            <div class="box date-picker-container ">
+                <div class="icon icon-calendar"></div>
+                <input type="date" id="datePicker">
+                <button id="setDateButton" class="set-date-button">Set Date</button>
+            </div>
+
+
+            <div class="box sleep-goal-container">
+                <div class="time-picker-item">
+                    <div class="icon moon-icon"></div>
+                    <input type="time" id="goalSleepStart">
+                </div>
+                <div class="time-picker-item">
+                    <div class="icon sun-icon"></div>
+                    <input type="time" id="goalSleepEnd">
+                </div>
+                <button id="setGoalButton" class="set-goal-button">Set Goal</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="elements.js"></script>
+    <script type="module" src="draw.js"></script>
+    <script type="module" src="client.js"></script>
+</body>
+</html>
