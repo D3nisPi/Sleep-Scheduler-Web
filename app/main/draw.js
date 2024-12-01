@@ -60,7 +60,7 @@ export function drawPlot() {
         data: {
             labels: labels,
             datasets: [{
-                label: 'Время сна (часов)',
+                label: 'Sleep time (hours)',
                 data: durations,
                 backgroundColor: 'rgba(91, 155, 213, 0.3)',
                 borderColor: 'rgba(46, 113, 180, 1)',
